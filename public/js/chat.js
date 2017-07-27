@@ -70,13 +70,6 @@ socket.on('updateUserList', function (users) {
     jQuery('#users').html(ol);
 });
 
-socket.emit('createMessage', {
-    from: 'Dodo',
-    text: 'Yo~'
-}, function (data) {
-    console.log('Got it', data);
-});
-
 jQuery('#message-form').on('submit', function (e) {
     e.preventDefault();
 
